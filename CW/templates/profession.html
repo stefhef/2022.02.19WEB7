@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h2>Список профессий</h2>
+<!--        {% for user in user_list %}-->
+<!--        <ol>{{ loop.index }} - {{ user }} {% if loop.first %} первый в очереди {% elif loop.last %} последний. {% endif %}-->
+<!--        </ol>-->
+<!--        {% endfor %}-->
+        <{{ list_type }}>
+            {% for prof in lst %}
+            <li>{{ prof }}</li>
+            {% endfor %}
+        </{{list_type }}>>
+    </div>
+{% endblock %}
