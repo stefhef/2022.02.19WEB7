@@ -30,5 +30,18 @@ def list_prof(list_type):
     return render_template("profession.html", title="Страничка", lst=lst, list_type=list_type)
 
 
+@app.route('/answer')
+@app.route('/auto_answer')
+def answer():
+    d = {"surname": "Sur",
+         "name": "Stepan",
+         "ed": "Up average",
+         "prof": "Pilot",
+         "sex": "male",
+         "mot": "I hope it",
+         "ready": "True"}
+    return render_template('answer.html', title='Ответик', d=d)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
