@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href={{ css_file }}>
+    <table>
+        <caption>Оформление каюты</caption>
+    <tr>
+        <th>Цвет стен</th>
+        <th>Эмблема</th>
+    </tr>
+    <tr>
+        <td style="background: {{ color }}; width: 50%"></td>
+        <td><img src="{{ avatar }}" alt='Аватар'></td>
+    </tr>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+th {
+    background-color: rgba(131,124,152,0.58);
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+table {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#header {
+
+}

@@ -63,6 +63,17 @@ def answer():
     return render_template('answer.html', title='Ответик', d=d)
 
 
+@app.route('/table/<sex>/<int:age>')
+def table(sex, age: int):
+    if age < 21:
+        img = '/static/img/adult.jpg'
+        color = '#42aaff' if sex == 'male' else '#1446a3'
+    else:
+        img = '/static/img/kid.jpg'
+        color = '#ffc0cb' if sex == 'male' else '#ff294d'
+    return render_template('table.html', color=color, avatar=img, css_file=url_for('static', filename='css/table.css'))
+
+
 @app.route('/login')
 def login():
     form = LoginForm()
