@@ -22,6 +22,13 @@ def index(title):
     return render_template('base.html', title=title)
 
 
+@app.route('/distribution')
+def distribution():
+    return render_template('distribution.html', title='Distribution',
+                           css_file=url_for('static', filename='css/distribution.css'),
+                           humans=['Peolpe 1', 'people2', 'Stepan Melnicov'])
+
+
 @app.route('/training/<prof>')
 def training(prof):
     if "инженер" in prof.lower() or "строитель" in prof.lower():

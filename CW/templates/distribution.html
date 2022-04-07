@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href={{ css_file }}>
+    <p id="mn">Размещение по каютам</p>
+    {% for human in humans %}
+        {% if loop.first %}
+            <p>{{ human }} - Каюта № {{ loop.index }} - каюта капитана</p>
+        {% else %}
+            <p>{{ human }} - Каюта № {{ loop.index }}</p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

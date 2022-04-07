@@ -1,0 +1,12 @@
+#mn {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+* {
+    font-size: 20px;
+    font-family: "Times New Roman", SansSerif, serif;
+}
