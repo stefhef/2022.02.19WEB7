@@ -6,16 +6,16 @@ app = Flask(__name__)
 @app.route('/<title>')
 @app.route('/index/<title>')
 def index(title):
-    return render_template('base.html', title=title)
+    return render_template('templates/base.html', title=title)
 
 
 @app.route('/training/<prof>')
 def training(prof):
     if "инженер" in prof.lower() or "строитель" in prof.lower():
-        return render_template("training.html", title="Инженерные тренажеры",
+        return render_template("templates/training.html", title="Инженерные тренажеры",
                                image=url_for('static', filename='img/ing.png'))
     else:
-        return render_template("training.html", title="Научные симуляторы",
+        return render_template("templates/training.html", title="Научные симуляторы",
                                image=url_for('static', filename='img/other.png'))
 
 
@@ -27,20 +27,7 @@ def list_prof(list_type):
         "специалист по радиационной защите", "астрогеолог", "гляциолог", "инженер жизнеобеспечения", "метеоролог",
         "оператор марсохода", "киберинженер", "штурман", "пилот дронов")
 
-    return render_template("profession.html", title="Страничка", lst=lst, list_type=list_type)
-
-
-@app.route('/answer')
-@app.route('/auto_answer')
-def answer():
-    d = {"surname": "Sur",
-         "name": "Stepan",
-         "ed": "Up average",
-         "prof": "Pilot",
-         "sex": "male",
-         "mot": "I hope it",
-         "ready": "True"}
-    return render_template('answer.html', title='Ответик', d=d)
+    return render_template("templates/profession.html", title="Страничка", lst=lst, list_type=list_type)
 
 
 if __name__ == '__main__':
